@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using GalaSoft.MvvmLight;
 using QudiniChallenge.Contracts.Domain;
 using QudiniChallenge.Contracts.PlatformSpecific;
 
 namespace QudiniChallenge.ViewModels.DataModels
 {
-    public class CustomerDataModel
+    public class CustomerDataModel : ViewModelBase
     {
-        private readonly ICustomer _customer;
-        private readonly IPlatformSpecificService _platformSpecificService;
+        private ICustomer _customer;
+        private IPlatformSpecificService _platformSpecificService;
 
         public CustomerDataModel(ICustomer customer, IPlatformSpecificService platformSpecificService   )
         {
@@ -43,6 +44,16 @@ namespace QudiniChallenge.ViewModels.DataModels
                 TimeSpan span = endTime.Subtract(startTime);
                 return span.Minutes;
             }
+        }
+
+        public int Id { get { return _customer.Id; } }
+
+        public void Update(ICustomer customer)
+        {
+            _customer = customer;
+            RaisePropertyChanged(()=>TimeLeftMinutes);
+            RaisePropertyChanged(()=>Name);
+            RaisePropertyChanged(()=>Gravatar);
         }
     }
 }

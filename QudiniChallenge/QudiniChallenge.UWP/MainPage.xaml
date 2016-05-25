@@ -8,6 +8,9 @@
     xmlns:viewModels="using:QudiniChallenge.ViewModels"
     mc:Ignorable="d"    
    >
+    <Page.Resources>
+        <local:ImageGravatarConverter x:Key="ImageGravatarConverter" />
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView ItemsSource="{Binding CustomerQueue}">
             <ListView.ItemContainerStyle>
@@ -25,7 +28,7 @@
                         </Grid.ColumnDefinitions>
                         <Ellipse Width="40" Height="40">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="{Binding Gravatar}"></ImageBrush>
+                                <ImageBrush ImageSource="{Binding Gravatar, Converter={StaticResource ImageGravatarConverter}}"></ImageBrush>
                             </Ellipse.Fill>
                         </Ellipse>
                         <TextBlock VerticalAlignment="Center" Margin="20 0 0 0" FontSize="22" Grid.Column="1" Text="{Binding Name}"></TextBlock>

@@ -7,6 +7,7 @@ namespace QudiniChallenge.Contracts.Domain
         string Name { get; set; }
         string Surname { get; set; }
         string Email { get; set; }
-        DateTime ExpectedTime { get; set; } 
+        DateTime ExpectedTime { get; set; }
+        int Id { get; set; }
     }
 }

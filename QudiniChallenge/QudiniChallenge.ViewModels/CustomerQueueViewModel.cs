@@ -33,7 +33,7 @@ namespace QudiniChallenge.ViewModels
         public bool IsQueueEmpty { get { return CustomerQueue.Count == 0; } }
 
         public async void StartQueueCheck()
-        {
+        { 
             while (true)
             {
                 await LoadData();
@@ -43,8 +43,8 @@ namespace QudiniChallenge.ViewModels
 
         public async Task LoadData()
         {
-            CustomerQueue.Clear();
             var serviceReq = await _service.GetCustomerQueue();
+            CustomerQueue.Clear();
             if (serviceReq.IsOk)
             {
                 foreach (var customer in serviceReq.Data)

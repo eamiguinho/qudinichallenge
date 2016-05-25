@@ -18,6 +18,7 @@ namespace QudiniChallenge.Contracts.Dtos
                 customer.ExpectedTime = customerDto.ExpectedTime;
                 customer.Name = customerDto.Customer.Name;
                 customer.Surname = customerDto.Customer.Surname;
+                customer.Id = customerDto.Id;
                 listCustomers.Add(customer);
             }
             return listCustomers;
