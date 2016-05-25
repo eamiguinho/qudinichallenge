@@ -10,8 +10,10 @@
    >
     <Page.Resources>
         <local:ImageGravatarConverter x:Key="ImageGravatarConverter" />
+        <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="Queue is empty!" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="{Binding IsQueueEmpty, Converter={StaticResource BooleanToVisibilityConverter}}"></TextBlock>
         <ListView ItemsSource="{Binding CustomerQueue}">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">

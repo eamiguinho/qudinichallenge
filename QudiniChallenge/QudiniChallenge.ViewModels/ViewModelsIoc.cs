@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using QudiniChallenge.Global;
+using QudiniChallenge.ViewModels.ViewModels;
 
 namespace QudiniChallenge.ViewModels
 {

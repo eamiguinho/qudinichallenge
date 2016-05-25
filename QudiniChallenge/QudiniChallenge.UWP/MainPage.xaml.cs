@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Autofac;
 using QudiniChallenge.Global;
 using QudiniChallenge.ViewModels;
+using QudiniChallenge.ViewModels.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 

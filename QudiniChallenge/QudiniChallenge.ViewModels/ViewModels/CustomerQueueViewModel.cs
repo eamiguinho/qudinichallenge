@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Reactive.Concurrency;
+using System.Reactive.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using GalaSoft.MvvmLight;
 using QudiniChallenge.Contracts.PlatformSpecific;
 using QudiniChallenge.Contracts.Services;
 using QudiniChallenge.ViewModels.DataModels;
 
-namespace QudiniChallenge.ViewModels
+namespace QudiniChallenge.ViewModels.ViewModels
 {
     public class CustomerQueueViewModel : ViewModelBase
     {
@@ -33,12 +36,10 @@ namespace QudiniChallenge.ViewModels
         public bool IsQueueEmpty { get { return CustomerQueue.Count == 0; } }
 
         public async void StartQueueCheck()
-        { 
-            while (true)
-            {
-                await LoadData();
-                await Task.Delay(TimeSpan.FromSeconds(30));
-            }
+        {
+            await LoadData();
+            var observable = Observable.Timer(TimeSpan.FromSeconds(30)).Timestamp();
+            observable.ObserveOn(SynchronizationContext.Current).Subscribe(async x => await LoadData());
         }
 
         public async Task LoadData()
