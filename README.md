@@ -24,7 +24,7 @@ The completed project should be uploaded to github and the URL submitted along w
 ## Developer resume
 Application was developed for Universal Windows Platform (Windows 10 and Windows Phone 10) all the steps request were complete with sucess, including 92.57% code test coverage.
 
-This architecture is ready for Xamarin iOS and Android, for different sources of data without changing the app domain (DDD).
+This architecture is ready for Xamarin iOS and Android and even ready for different sources of data without changing the app domain (DDD).
 
 #### Technologies & Patterns used
 1. Onion Architecture, DDD (Domain driven design), MVVM were the patterns used in this challenge.
