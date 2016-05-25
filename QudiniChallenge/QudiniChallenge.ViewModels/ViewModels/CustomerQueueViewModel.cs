@@ -37,8 +37,8 @@ namespace QudiniChallenge.ViewModels.ViewModels
 
         public async void StartQueueCheck()
         {
-            await LoadData();
-            var observable = Observable.Timer(TimeSpan.FromSeconds(30)).Timestamp();
+            //await LoadData();
+            var observable = Observable.Timer(TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(30)).Timestamp();
             observable.ObserveOn(SynchronizationContext.Current).Subscribe(async x => await LoadData());
         }
 
