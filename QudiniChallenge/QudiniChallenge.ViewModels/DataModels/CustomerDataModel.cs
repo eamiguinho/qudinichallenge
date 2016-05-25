@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
 using GalaSoft.MvvmLight;
 using QudiniChallenge.Contracts.Domain;
 using QudiniChallenge.Contracts.PlatformSpecific;
