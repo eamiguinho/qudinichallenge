@@ -28,7 +28,8 @@ namespace QudiniChallenge.Global
     {
         Ok,
         Error,
-        InvalidCredentials
+        InvalidCredentials,
+        NoInternetConnection
     }
 
     public class DataResult<T>
@@ -46,7 +47,13 @@ namespace QudiniChallenge.Global
         public DataResult(Result res, string errorMessage)
         {
             Result = res;
+            if (res == Result.Error)
+            {
+                ErrorMessage = errorMessage;
+            }
         }
+
+        public string ErrorMessage { get; set; }
 
         public Result Result { get; set; }
         public bool IsOk { get { return Result == Result.Ok; } }

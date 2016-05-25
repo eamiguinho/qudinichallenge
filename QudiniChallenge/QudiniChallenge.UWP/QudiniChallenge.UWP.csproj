@@ -95,6 +95,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\AlertService.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -102,6 +103,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PlatformSpecificService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -128,6 +130,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QudiniChallenge.Contracts\QudiniChallenge.Contracts.csproj">
+      <Project>{5DDCDD5B-F84C-4699-8850-9542B94C5AF8}</Project>
+      <Name>QudiniChallenge.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QudiniChallenge.DataServices.Implementation\QudiniChallenge.DataServices.Implementation.csproj">
+      <Project>{ECD4254F-EB99-42BC-8D45-D6A0B2B7F8E1}</Project>
+      <Name>QudiniChallenge.DataServices.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QudiniChallenge.Domain.Implementation\QudiniChallenge.Domain.Implementation.csproj">
+      <Project>{8A0573ED-584D-458A-8F0D-EE92CAD6B756}</Project>
+      <Name>QudiniChallenge.Domain.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QudiniChallenge.Global\QudiniChallenge.Global.csproj">
+      <Project>{3A6CAE1B-EE36-4105-BC8D-241E49337465}</Project>
+      <Name>QudiniChallenge.Global</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QudiniChallenge.Services.Implementation\QudiniChallenge.Services.Implementation.csproj">
+      <Project>{40007BA5-5174-490D-B8BA-A26FBA458E51}</Project>
+      <Name>QudiniChallenge.Services.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QudiniChallenge.ViewModels\QudiniChallenge.ViewModels.csproj">
+      <Project>{36F17C25-CF9D-4D3D-A192-8D7C0F383F5C}</Project>
+      <Name>QudiniChallenge.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

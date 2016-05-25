@@ -2,7 +2,6 @@
     x:Class="QudiniChallenge.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:QudiniChallenge.UWP"
+    xmlns:uwp="using:QudiniChallenge.UWP"
     RequestedTheme="Light">
-
 </Application>

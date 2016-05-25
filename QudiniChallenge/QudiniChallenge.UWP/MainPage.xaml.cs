@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Autofac;
+using QudiniChallenge.Global;
+using QudiniChallenge.ViewModels;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,9 +25,19 @@ namespace QudiniChallenge.UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private CustomerQueueViewModel _vm;
+
         public MainPage()
         {
             this.InitializeComponent();
+            _vm = Ioc.Container.Resolve<CustomerQueueViewModel>();
+            DataContext = _vm;
+            Loaded += MainPage_Loaded;
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            _vm.StartQueueCheck();
         }
     }
 }

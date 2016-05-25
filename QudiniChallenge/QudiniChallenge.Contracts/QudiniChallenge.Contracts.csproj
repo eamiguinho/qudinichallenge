@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5ddcdd5b-f84c-4699-8850-9542b94c5af8}</ProjectGuid>
+    <ProjectGuid>{5DDCDD5B-F84C-4699-8850-9542B94C5AF8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QudiniChallenge.Contracts</RootNamespace>
@@ -34,11 +34,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="DataServices\ICustomerQueueDataService.cs" />
+    <Compile Include="DataServices\ILoginCredentials.cs" />
+    <Compile Include="Domain\ICustomer.cs" />
+    <Compile Include="Dtos\RequestDataDto.cs" />
+    <Compile Include="Dtos\CreatedByDto.cs" />
+    <Compile Include="Dtos\CustomerDto.cs" />
+    <Compile Include="Dtos\CustomersTodayDto.cs" />
+    <Compile Include="Dtos\RequestDataDtoFactory.cs" />
+    <Compile Include="PlatformSpecific\IAlertService.cs" />
+    <Compile Include="PlatformSpecific\IPlatformSpecificService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dtos\QueueDataDto.cs" />
+    <Compile Include="Dtos\QueueDto.cs" />
+    <Compile Include="Services\ICustomerQueueService.cs" />
+    <Compile Include="ViewModels\ICustomerQueueViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.4-beta1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QudiniChallenge.Global\QudiniChallenge.Global.csproj">
+      <Project>{3A6CAE1B-EE36-4105-BC8D-241E49337465}</Project>
+      <Name>QudiniChallenge.Global</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -48,5 +77,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>

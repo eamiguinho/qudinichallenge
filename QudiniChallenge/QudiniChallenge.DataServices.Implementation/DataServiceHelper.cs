@@ -15,7 +15,7 @@ namespace QudiniChallenge.DataServices.Implementation
         {
             try
             {
-                var client = new HttpClient();
+                var client = GetClient();
                 var byteArray = Encoding.UTF8.GetBytes(string.Format("{0}:{1}", credentials.Username, credentials.Password));
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
                 var res = await client.GetAsync(url);
@@ -34,6 +34,16 @@ namespace QudiniChallenge.DataServices.Implementation
             {
                 return new DataResult<T>(Result.Error, e.Message);
             }
+        }
+
+        private static HttpClient GetClient()
+        {
+            var handler = new HttpClientHandler()
+            {
+                AllowAutoRedirect = false
+            };
+
+            return  new HttpClient(handler);
         }
     }
 }

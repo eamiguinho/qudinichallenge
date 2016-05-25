@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{40007ba5-5174-490d-b8ba-a26fba458e51}</ProjectGuid>
+    <ProjectGuid>{40007BA5-5174-490D-B8BA-A26FBA458E51}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QudiniChallenge.Services.Implementation</RootNamespace>
@@ -35,10 +35,32 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\QudiniChallenge.Contracts\QudiniChallenge.Contracts.csproj">
+      <Project>{5DDCDD5B-F84C-4699-8850-9542B94C5AF8}</Project>
+      <Name>QudiniChallenge.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QudiniChallenge.DataServices.Implementation\QudiniChallenge.DataServices.Implementation.csproj">
+      <Project>{ECD4254F-EB99-42BC-8D45-D6A0B2B7F8E1}</Project>
+      <Name>QudiniChallenge.DataServices.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QudiniChallenge.Global\QudiniChallenge.Global.csproj">
+      <Project>{3A6CAE1B-EE36-4105-BC8D-241E49337465}</Project>
+      <Name>QudiniChallenge.Global</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ServicesIoc.cs" />
+    <Compile Include="CustomerQueueService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -48,5 +70,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>

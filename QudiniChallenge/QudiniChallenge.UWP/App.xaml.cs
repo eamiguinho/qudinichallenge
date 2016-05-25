@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Autofac;
+using QudiniChallenge.Contracts.PlatformSpecific;
+using QudiniChallenge.DataServices.Implementation;
+using QudiniChallenge.Domain.Implementation;
+using QudiniChallenge.Global;
+using QudiniChallenge.Services.Implementation;
+using QudiniChallenge.UWP.Services;
+using QudiniChallenge.ViewModels;
 
 namespace QudiniChallenge.UWP
 {
@@ -33,6 +31,12 @@ namespace QudiniChallenge.UWP
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            DomainIoc.Register();
+            ServicesIoc.Register();
+            DataServicesIoc.Register();
+            ViewModelsIoc.Register();
+            Ioc.Instance.RegisterType<PlatformSpecificService>().As<IPlatformSpecificService>().SingleInstance();
+            Ioc.Instance.RegisterType<AlertService>().As<IAlertService>().SingleInstance();
         }
 
         /// <summary>
