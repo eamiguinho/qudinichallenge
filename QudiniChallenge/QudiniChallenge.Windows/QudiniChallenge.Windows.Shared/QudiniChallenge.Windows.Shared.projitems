@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4529b38a-c70c-4428-9b84-ab1c6800058c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>QudiniChallenge.Windows</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ImageGravatarConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AlertService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\PlatformSpecificService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

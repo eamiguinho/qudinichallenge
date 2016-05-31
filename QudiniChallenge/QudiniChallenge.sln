@@ -29,7 +29,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QudiniChallenge.Services.Un
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QudiniChallenge.ViewModels", "QudiniChallenge.ViewModels\QudiniChallenge.ViewModels.csproj", "{36F17C25-CF9D-4D3D-A192-8D7C0F383F5C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QudiniChallenge.Windows", "QudiniChallenge.Windows", "{29FC9752-3965-43C8-8119-B94B800524C1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "QudiniChallenge.Windows.Shared", "QudiniChallenge.Windows\QudiniChallenge.Windows.Shared\QudiniChallenge.Windows.Shared.shproj", "{4529B38A-C70C-4428-9B84-AB1C6800058C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QudiniChallenge.Windows.Windows", "QudiniChallenge.Windows\QudiniChallenge.Windows.Windows\QudiniChallenge.Windows.Windows.csproj", "{3CF3A879-22C4-49A9-BC32-F733D730F586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QudiniChallenge.Windows.WindowsPhone", "QudiniChallenge.Windows\QudiniChallenge.Windows.WindowsPhone\QudiniChallenge.Windows.WindowsPhone.csproj", "{C25533FD-567A-4E29-999B-C997DACCA2AF}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		QudiniChallenge.Windows\QudiniChallenge.Windows.Shared\QudiniChallenge.Windows.Shared.projitems*{3cf3a879-22c4-49a9-bc32-f733d730f586}*SharedItemsImports = 4
+		QudiniChallenge.Windows\QudiniChallenge.Windows.Shared\QudiniChallenge.Windows.Shared.projitems*{4529b38a-c70c-4428-9b84-ab1c6800058c}*SharedItemsImports = 13
+		QudiniChallenge.Windows\QudiniChallenge.Windows.Shared\QudiniChallenge.Windows.Shared.projitems*{c25533fd-567a-4e29-999b-c997dacca2af}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
@@ -191,6 +204,54 @@ Global
 		{36F17C25-CF9D-4D3D-A192-8D7C0F383F5C}.Release|x64.Build.0 = Release|Any CPU
 		{36F17C25-CF9D-4D3D-A192-8D7C0F383F5C}.Release|x86.ActiveCfg = Release|Any CPU
 		{36F17C25-CF9D-4D3D-A192-8D7C0F383F5C}.Release|x86.Build.0 = Release|Any CPU
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|ARM.ActiveCfg = Debug|ARM
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|ARM.Build.0 = Debug|ARM
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|ARM.Deploy.0 = Debug|ARM
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|x64.ActiveCfg = Debug|x64
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|x64.Build.0 = Debug|x64
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|x64.Deploy.0 = Debug|x64
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|x86.ActiveCfg = Debug|x86
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|x86.Build.0 = Debug|x86
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Debug|x86.Deploy.0 = Debug|x86
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|ARM.ActiveCfg = Release|ARM
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|ARM.Build.0 = Release|ARM
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|ARM.Deploy.0 = Release|ARM
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|x64.ActiveCfg = Release|x64
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|x64.Build.0 = Release|x64
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|x64.Deploy.0 = Release|x64
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|x86.ActiveCfg = Release|x86
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|x86.Build.0 = Release|x86
+		{3CF3A879-22C4-49A9-BC32-F733D730F586}.Release|x86.Deploy.0 = Release|x86
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|ARM.Build.0 = Debug|ARM
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|x86.ActiveCfg = Debug|x86
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|x86.Build.0 = Debug|x86
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Debug|x86.Deploy.0 = Debug|x86
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|ARM.ActiveCfg = Release|ARM
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|ARM.Build.0 = Release|ARM
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|ARM.Deploy.0 = Release|ARM
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|x64.Build.0 = Release|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|x64.Deploy.0 = Release|Any CPU
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|x86.ActiveCfg = Release|x86
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|x86.Build.0 = Release|x86
+		{C25533FD-567A-4E29-999B-C997DACCA2AF}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -204,5 +265,8 @@ Global
 		{13D0FE5D-DD6E-4152-A8CE-11C9430A5288} = {7B152988-AC6A-491F-AB90-D831501E605B}
 		{FE969A2A-9627-4A61-9AA7-C31A7AF99489} = {D0DEA630-506B-4603-A328-93FC24192926}
 		{36F17C25-CF9D-4D3D-A192-8D7C0F383F5C} = {AC005142-ABF1-4699-B7D3-ECDA17B3D779}
+		{4529B38A-C70C-4428-9B84-AB1C6800058C} = {29FC9752-3965-43C8-8119-B94B800524C1}
+		{3CF3A879-22C4-49A9-BC32-F733D730F586} = {29FC9752-3965-43C8-8119-B94B800524C1}
+		{C25533FD-567A-4E29-999B-C997DACCA2AF} = {29FC9752-3965-43C8-8119-B94B800524C1}
 	EndGlobalSection
 EndGlobal
